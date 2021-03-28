@@ -3,7 +3,7 @@ package com.practicecode.springboot.springbootcruddemo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
 
     // define fields
@@ -23,30 +23,30 @@ public class Employee {
     private String email;
 
     // define constructors
-    public Employee(){
+    public Employee() {
 
     }
 
-    public Employee(String firstName, String lastName, String email){
+    public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
     // define getters & setters
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public void setFirstName(String firstName){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastName){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
