@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class Employee {
 
     // define fields
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
