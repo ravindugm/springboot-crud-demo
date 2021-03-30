@@ -35,16 +35,30 @@ public class StudentDAOJpaImpl implements StudentDAO {
 
     @Override
     public Student findById(int theId) {
-        return null;
+
+        // get student
+        Student theStudent = entityManager.find(Student.class, theId);
+
+        // return student
+        return theStudent;
     }
 
     @Override
     public void save(Student theStudent) {
+        // save or update the student
+        Student student = entityManager.merge(theStudent);
 
+        // update with the id from database then can generate id for save/ insert
+        theStudent.setId(student.getId());
     }
 
     @Override
     public void deleteById(int theId) {
+        // delete object with the primary key
+        Query theQuery = entityManager.createQuery("delete from Student where id=:studentId");
 
+        theQuery.setParameter("studentId", theId);
+
+        theQuery.executeUpdate();
     }
 }
