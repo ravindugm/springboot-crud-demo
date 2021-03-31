@@ -3,3 +3,4 @@
 - Use EntityManager but leverage native Hibernate API (Employee)
 - Use EntityManager and standard JPA API (Student)
 - Use Spring Data JPA (Customer)
+- Add Spring Data REST (Teacher)
